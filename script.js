@@ -1,20 +1,15 @@
 'use strict'
 
-let money = 50000; 
 
 let income = '50000';
-
-let addExpenses = 'иНтернет, такси, коммуналка';
-
-let deposit = true;
 
 let mission = 500000;
 
 let period = 6;
 
-   money = prompt('Ваш месячный доход?');
-   addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-   deposit = confirm('Есть ли у вас депозит в банке?');
+let money = prompt('Ваш месячный доход?');
+let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+let deposit = confirm('Есть ли у вас депозит в банке?');
    
   
 
