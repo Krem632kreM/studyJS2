@@ -61,11 +61,7 @@ window.addEventListener('DOMContentLoaded', function () {
         menuItems = menu.querySelectorAll('ul>li');
         
         const handlerMenu = () => {
-            if(!menu.style.transform || menu.style.transform === `translate(-100%)`){
-                menu.style.transform = `translate(0)`;
-            } else {
-                menu.style.transform = `translate(-100%)`;
-            }
+            menu.classList.toggle("active-menu");
         };
     
         btnMenu.addEventListener('click', handlerMenu);
@@ -95,8 +91,12 @@ window.addEventListener('DOMContentLoaded', function () {
             popupBtn.forEach((elem)=> {
                 elem.addEventListener('click', () => {
                     popup.style.display = 'block';
-                    if (window.screen.width >= 768) popupActive(); 
+                    if (window.screen.width < 768) {
+                    } else {
+                        popupActive();
+                    }     
                 });
+                console.log(window.screen.width);
     
                 popUpClose.addEventListener('click', () => {
                     popup.style.display = 'none';
