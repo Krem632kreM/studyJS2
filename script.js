@@ -61,12 +61,12 @@ window.addEventListener('DOMContentLoaded', function () {
         menuItems = menu.querySelectorAll('ul>li');
         
         const handlerMenu = () => {
-           //menu.classList.toggle("active-menu");
-           if(!menu.style.transform || menu.style.transform === `translate(-100%)`){
+           menu.classList.toggle("active-menu");
+           /*if(!menu.style.transform || menu.style.transform === `translate(-100%)`){
             menu.style.transform = `translate(0)`;
         } else {
             menu.style.transform = `translate(-100%)`;
-        }
+        }*/
 
         };
     
@@ -144,21 +144,17 @@ window.addEventListener('DOMContentLoaded', function () {
     
             tabHeader.addEventListener('click', (event) => {
                 let target = event.target;
-                target= target.closest(".service-header-tab");
-                while (target!== tabHeader) {
-                if(target.classList.contains('service-header-tab')){
+                target = target.closest(".service-header-tab");
+                if(target){
                     tab.forEach((item, i) => {
                         if (item === target) {
                             toggleTabContend(i);
                         }
-                    })
+                    });
                 }
-                target = target.parentNode;
-            }
-    
             });
     
-        };
+    };
     
         tabs();
     });
