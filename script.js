@@ -22,9 +22,9 @@ class Todo {
                 key: this.generateKey()
             };
             this.todoData.set(newTodo.key, newTodo);
+            this.input.value = '';
             this.render();
         }
-        console.log(this);
     }
 
     generateKey() {
@@ -108,4 +108,3 @@ const todo = new Todo('.todo-control', '.header-input', '.todo-list', '.todo-com
 
 todo.init();
 
-console.log('dhshsd');
